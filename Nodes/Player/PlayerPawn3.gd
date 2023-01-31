@@ -69,9 +69,15 @@ func ModStats():
 	pass
 
 func AddStates(CharacterName): #Adds the Init De/Buffs
-	var CSVDATA = GameFunction.readCSV(DataPath.GetPlayerData())
-	if str(CSVDATA[CharacterName]["Buffs/De"]) != "":
-		var ScriptPacked = load(CSVDATA[CharacterName]["Buffs/De"])
+#	var CSVDATA = GameFunction.readCSV(DataPath.GetPlayerData())
+	var CSVDATA
+	for character in GameFunction.readJson("res://CSVData/CharacterBaseStats.json"):
+		if character.id == CharacterName:
+			CSVDATA = character
+			pass
+#	if str(CSVDATA[CharacterName]["Buffs/De"]) != "":
+	if str(CSVDATA["Buffs/De"]) != "":
+		var ScriptPacked = load(CSVDATA["Buffs/De"])
 		var BuffNode = Node.new()
 		BuffNode.set_script(ScriptPacked)
 		get_node("States").add_child(BuffNode)
@@ -80,8 +86,13 @@ func AddStates(CharacterName): #Adds the Init De/Buffs
 
 func AddWeapon(WeaponName : String):
 #	return #Debug 
-	var CSVDATA = GameFunction.readCSV(DataPath.GetItemData())
-	var Weapon = GameFunction.SpawnActor(load(CSVDATA[WeaponName]["ItemPath"]), Vector2(), 0.0, Vector2(1, 1), get_node("WeaponHolster"), self)
+#	var CSVDATA = GameFunction.readCSV(DataPath.GetItemData())
+	var CSVDATA
+	for weapon in GameFunction.readJson('res://CSVData/WeaponData.json'):
+		if weapon.id == WeaponName:
+			CSVDATA = weapon
+
+	var Weapon = GameFunction.SpawnActor(load(CSVDATA["ItemPath"]), Vector2(), 0.0, Vector2(1, 1), get_node("WeaponHolster"), self)
 	Weapon.Instigator = self
 	Weapon.CurStats.AssignBaseStats(WeaponName)
 	playerGUI.AddItemToCoolDownPanel(WeaponName, Weapon.CurStats.SpriteResource.get_frame("default", 0), Weapon.WeaponCoolDownTimer)

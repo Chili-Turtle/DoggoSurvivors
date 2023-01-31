@@ -165,6 +165,9 @@ func _physics_process(delta):
 		AgentVel = Vector2()
 	
 	NavAgent.set_velocity(AgentVel + KnockBackDir)
+	
+	if OS.get_name() == "HTML5":
+		velocity = move_and_slide(AgentVel + KnockBackDir * (delta*2))
 	#print(NavAgent.is_target_reached())
 	pass
 

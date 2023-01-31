@@ -68,7 +68,7 @@
     "Reroll Item": 0,
     "ExperienceMultiplier": 1,
     "ResourcePath": "res://Nodes/Player/PlayerPawn.tscn",
-    "ScriptResourcePath": "ModdingData/PlayerPawn.gd",
+    "ScriptResourcePath": "res://Nodes/Player/PlayerPawn3.gd",
     "IconResourcePath": "res://Sprite/DoggoPlayer/DoggoSprite.tres",
     "StartWeapons": "Whip",
     "Buffs/De": "",
