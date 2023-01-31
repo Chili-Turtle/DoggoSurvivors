@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Data/Resources/WeaponDataRes.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+WeaponName = "Knife"
+WeaponBaseDamge = 100.0
+CollisionArea = Vector2( 10, 10 )
+ProjectileSpeed = 100.0
+ProjectileAmount = 1.0
+Cooldown = 1.0
+ProjectileInterval = 0.1
+Knockback = 100.0
+MaxTravelRange = 200.0
+CriticalChance = 10.0
+CriticalMultiplier = 1.0
+RandomSpawnRadius = 10.0
+SpawnOffset = -10.0
+AnimationBool = false
+ItemType = 0
+ItemDescription = "This is a itemdecription"
+WeaponGrowth = [  ]

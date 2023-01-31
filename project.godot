@@ -1,0 +1,417 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Resource",
+"class": "AirTimeEnd",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/AirTimeEnd/AirTimeEnd_Base.gd"
+}, {
+"base": "AirTimeEnd",
+"class": "AirTimeEndDisableProjectile",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/AirTimeEnd/AirTimeEnd_DisableProjectile.gd"
+}, {
+"base": "AirTimeEnd",
+"class": "AirTimeEndRemoveProjectile",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/AirTimeEnd/AirTimeEnd_RemoveProjectile.gd"
+}, {
+"base": "AirTimeEnd",
+"class": "AirTimeEndSpawnBombArea",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/AirTimeEnd/AirTimeEnd_SpawnBombArea.gd"
+}, {
+"base": "Resource",
+"class": "BaseLevelEvent",
+"language": "GDScript",
+"path": "res://Nodes/LevelEvents/LevelEventBase.gd"
+}, {
+"base": "Resource",
+"class": "BossAttack",
+"language": "GDScript",
+"path": "res://Nodes/Enemies/FinalBoss/BossAttackBase.gd"
+}, {
+"base": "BossAttack",
+"class": "BossAttack8WayBullet",
+"language": "GDScript",
+"path": "res://Nodes/Enemies/FinalBoss/BossAttack8WayBullet.gd"
+}, {
+"base": "BossAttack",
+"class": "BossAttackJump",
+"language": "GDScript",
+"path": "res://Nodes/Enemies/FinalBoss/BossAttackJump.gd"
+}, {
+"base": "BossAttack",
+"class": "BossAttackWindScar",
+"language": "GDScript",
+"path": "res://Nodes/Enemies/FinalBoss/BossWindScar.gd"
+}, {
+"base": "Drops",
+"class": "BossEnemieDrop",
+"language": "GDScript",
+"path": "res://Nodes/Enemies/BossEnemieDrop.gd"
+}, {
+"base": "Resource",
+"class": "Character",
+"language": "GDScript",
+"path": "res://Data/Resources/Character.gd"
+}, {
+"base": "SpawnDirection",
+"class": "CircularSpawn",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/SpawnDirection/Scripts/CircularSpawn.gd"
+}, {
+"base": "Node",
+"class": "DataPath",
+"language": "GDScript",
+"path": "res://StaticFunctions/GlobalDataPaths.gd"
+}, {
+"base": "Node",
+"class": "Drops",
+"language": "GDScript",
+"path": "res://Nodes/Enemies/Drop.gd"
+}, {
+"base": "SpawnDirection",
+"class": "EightWayDirection",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/SpawnDirection/Scripts/8WayDirection.gd"
+}, {
+"base": "Resource",
+"class": "EnemieStats",
+"language": "GDScript",
+"path": "res://Data/EnemieStats.gd"
+}, {
+"base": "Node2D",
+"class": "GameFunction",
+"language": "GDScript",
+"path": "res://StaticFunctions/StaticGameFunctions.gd"
+}, {
+"base": "Node2D",
+"class": "GameFunctionCast",
+"language": "GDScript",
+"path": "res://StaticFunctions/GameFunctionCast.gd"
+}, {
+"base": "BaseLevelEvent",
+"class": "GraveyardEvent",
+"language": "GDScript",
+"path": "res://Nodes/LevelEvents/GraveyardEvent.gd"
+}, {
+"base": "WeaponAttack",
+"class": "HitScanAttack",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/ProjectileType/HitScanAttack.gd"
+}, {
+"base": "Node",
+"class": "HitScanAttackNode",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Nodes/HitScanNode.gd"
+}, {
+"base": "SpawnDirection",
+"class": "MoveDirection",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/SpawnDirection/Scripts/MoveDirection.gd"
+}, {
+"base": "SpriteFrames",
+"class": "MySpriteFrames",
+"language": "GDScript",
+"path": "res://Sprite/Animations/MyAnimationFrames.gd"
+}, {
+"base": "Drops",
+"class": "NormalEnemyDrop",
+"language": "GDScript",
+"path": "res://Nodes/Enemies/NormalEnemieDrop.gd"
+}, {
+"base": "OnHitEffectBase",
+"class": "OnHitCircleSpikes",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/OnHitEffectEnemy/OnHitCircleSpikes.gd"
+}, {
+"base": "OnHitEffectBase",
+"class": "OnHitCounter",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/OnHitEffectEnemy/OnHitCounter.gd"
+}, {
+"base": "Resource",
+"class": "OnHitEffectBase",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/OnHitEffectEnemy/OnHitEffectBase.gd"
+}, {
+"base": "OnHitEffectBase",
+"class": "OnHitEffectBurn",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/OnHitEffectEnemy/OnHitEffectBurn.gd"
+}, {
+"base": "Resource",
+"class": "OnHitEffectWallBase",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/OnHitEffectEnemy/OnHitEffectWallBase.gd"
+}, {
+"base": "SpawnDirection",
+"class": "OneEightySpawn",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/SpawnDirection/Scripts/180CircleSpawn.gd"
+}, {
+"base": "BaseLevelEvent",
+"class": "OnionHuntEvent",
+"language": "GDScript",
+"path": "res://Nodes/LevelEvents/OnionHuntEvent.gd"
+}, {
+"base": "Area2D",
+"class": "PickUp",
+"language": "GDScript",
+"path": "res://Nodes/Gems/PickUp.gd"
+}, {
+"base": "Resource",
+"class": "PlayerStats",
+"language": "GDScript",
+"path": "res://Data/PlayerStats.gd"
+}, {
+"base": "Node2D",
+"class": "Projectile",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/Projectiles/ProjectileBase.gd"
+}, {
+"base": "WeaponAttack",
+"class": "ProjectileAttack",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/ProjectileType/ProjectileAttack.gd"
+}, {
+"base": "ProjectileMovementBase",
+"class": "ProjectileDeaccelerate",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/ProjectileMovement/ProjectileDeaccelerate.gd"
+}, {
+"base": "Resource",
+"class": "ProjectileMovementBase",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/ProjectileMovement/ProjectileMovementBase.gd"
+}, {
+"base": "ProjectileMovementBase",
+"class": "ProjectileMovementForward",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/ProjectileMovement/ProjectileMovementForward.gd"
+}, {
+"base": "ProjectileMovementBase",
+"class": "ProjectileMovementForwardHoming",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/ProjectileMovement/ProjectileMovementForwardHoming.gd"
+}, {
+"base": "ProjectileMovementForward",
+"class": "ProjectileMovementWindScar",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/ProjectileMovement/ProjectileMovementWindScar.gd"
+}, {
+"base": "Resource",
+"class": "SpawnDirection",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/SpawnDirection/Scripts/SpawnDirection.gd"
+}, {
+"base": "Resource",
+"class": "TakeDamageBaseMod",
+"language": "GDScript",
+"path": "res://Nodes/TakeDamageMods/TakeDamageBaseMod.gd"
+}, {
+"base": "TakeDamageBaseMod",
+"class": "TakeDamageHealFromDamage",
+"language": "GDScript",
+"path": "res://Nodes/TakeDamageMods/TakeDamageHealFromDamage.gd"
+}, {
+"base": "Resource",
+"class": "WeaponAnimationFinished",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/WeaponAnimaionFinished/WeaponAnimationFinished_Base.gd"
+}, {
+"base": "Resource",
+"class": "WeaponAnimationFinishedRemoveProjectile",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/WeaponAnimaionFinished/WeaponAnimationFinished_RemoveProjectile.gd"
+}, {
+"base": "Resource",
+"class": "WeaponAttack",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/ProjectileType/WeaponAttack.gd"
+}, {
+"base": "Resource",
+"class": "WeaponDataResource",
+"language": "GDScript",
+"path": "res://Data/Resources/WeaponDataRes.gd"
+}, {
+"base": "Resource",
+"class": "WeaponStats",
+"language": "GDScript",
+"path": "res://Data/Resources/WeaponStats.gd"
+}, {
+"base": "SpawnDirection",
+"class": "WhipSpawnDirection",
+"language": "GDScript",
+"path": "res://Nodes/Weapons/GeneratedWeapons/Resources/SpawnDirection/Scripts/WhipSpawnDirection.gd"
+} ]
+_global_script_class_icons={
+"AirTimeEnd": "",
+"AirTimeEndDisableProjectile": "",
+"AirTimeEndRemoveProjectile": "",
+"AirTimeEndSpawnBombArea": "",
+"BaseLevelEvent": "",
+"BossAttack": "",
+"BossAttack8WayBullet": "",
+"BossAttackJump": "",
+"BossAttackWindScar": "",
+"BossEnemieDrop": "",
+"Character": "",
+"CircularSpawn": "",
+"DataPath": "",
+"Drops": "",
+"EightWayDirection": "",
+"EnemieStats": "",
+"GameFunction": "",
+"GameFunctionCast": "",
+"GraveyardEvent": "",
+"HitScanAttack": "",
+"HitScanAttackNode": "",
+"MoveDirection": "",
+"MySpriteFrames": "",
+"NormalEnemyDrop": "",
+"OnHitCircleSpikes": "",
+"OnHitCounter": "",
+"OnHitEffectBase": "",
+"OnHitEffectBurn": "",
+"OnHitEffectWallBase": "",
+"OneEightySpawn": "",
+"OnionHuntEvent": "",
+"PickUp": "",
+"PlayerStats": "",
+"Projectile": "",
+"ProjectileAttack": "",
+"ProjectileDeaccelerate": "",
+"ProjectileMovementBase": "",
+"ProjectileMovementForward": "",
+"ProjectileMovementForwardHoming": "",
+"ProjectileMovementWindScar": "",
+"SpawnDirection": "",
+"TakeDamageBaseMod": "",
+"TakeDamageHealFromDamage": "",
+"WeaponAnimationFinished": "",
+"WeaponAnimationFinishedRemoveProjectile": "",
+"WeaponAttack": "",
+"WeaponDataResource": "",
+"WeaponStats": "",
+"WhipSpawnDirection": ""
+}
+
+[application]
+
+config/name="Vampire survivors"
+run/main_scene="res://Maps/Main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Pool="*res://Singleton/Pool.gd"
+CameraManager="*res://Singleton/CameraManager.gd"
+SoundManager="*res://Singleton/SoundManager/SoundManager.tscn"
+PlayerManager="*res://Singleton/PlayerManager.gd"
+SaveManager="*res://Singleton/SaveManager.gd"
+UiManager="*res://Singleton/UIManager/UIManager.tscn"
+LevelManager="*res://Singleton/LevelManager.gd"
+GlobalDraw="*res://Singleton/GlobalDraw/GlobalDraw.tscn"
+EnemySpawner="*res://Singleton/EnemieSpawner/EnemySpawner.tscn"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/test_width=1024
+window/size/test_height=600
+window/vsync/use_vsync=false
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[editor]
+
+version_control_autoload_on_startup=true
+version_control_plugin_name="GitAPI"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/Todo_Manager/plugin.cfg", "res://addons/fc_colorpicker_palette/plugin.cfg", "res://addons/fun_coding/plugin.cfg", "res://addons/imrp/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/project-statistics/plugin.cfg" )
+
+[fc]
+
+colorpicker_palette/gpl_file="res://Sprite/ColorPalettes/pear36.gpl"
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[input]
+
+MoveRight={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":15,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+MoveLeft={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":-1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+MoveUp={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":-1.0,"script":null)
+ ]
+}
+MoveDown={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":1,"axis_value":1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+MouseWheelUp={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":4,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+MouseWheelDown={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":5,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_render/layer_1="All"
+2d_render/layer_2="Player"
+2d_render/layer_3="Enemies"
+2d_render/layer_4="Items"
+2d_render/layer_5="Level"
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Enemy"
+2d_physics/layer_3="StaticCollision"
+2d_physics/layer_4="Trigger"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
+
+[statistics]
+
+force_include=PoolStringArray(  )

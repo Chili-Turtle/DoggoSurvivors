@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Nodes/Weapons/Magnet/Magnet.gd" type="Script" id=1]
+[ext_resource path="res://Nodes/Misc/CircleCast.gd" type="Script" id=2]
+
+[node name="Magnet" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="CircleCast" type="Node2D" parent="."]
+script = ExtResource( 2 )
+DrawDebugShape = false
+CollisionMask = [ 4 ]
+MaxCollisions = 100

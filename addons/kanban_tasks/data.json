@@ -1,0 +1,60 @@
+{
+  "categories": [
+    {
+      "title": "Task",
+      "color": "6495ed"
+    },
+    {
+      "title": "Current",
+      "color": "ffe478"
+    },
+    {
+      "title": "Error",
+      "color": "eb564b"
+    }
+  ],
+  "columns": [
+    {
+      "stages": [
+        0
+      ]
+    },
+    {
+      "stages": [
+        1
+      ]
+    },
+    {
+      "stages": [
+        2
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "title": "Todo",
+      "tasks": [
+        0
+      ]
+    },
+    {
+      "title": "Doing",
+      "tasks": [
+
+      ]
+    },
+    {
+      "title": "Done",
+      "tasks": [
+
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "category": 2,
+      "title": "Bug2TimeLevelUp",
+      "details": ""
+    }
+  ]
+}

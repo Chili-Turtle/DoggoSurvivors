@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Nodes/Enemies/NormalEnemy.gd" type="Script" id=2]
+[ext_resource path="res://Nodes/Stats/Health.gd" type="Script" id=3]
+[ext_resource path="res://Nodes/State/StateManger.gd" type="Script" id=4]
+[ext_resource path="res://Nodes/Enemies/NormalEnemieDrop.gd" type="Script" id=5]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[node name="NormalEnemy" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.441667, 0.441667 )
+playing = true
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+physics_interpolation_mode = 2
+avoidance_enabled = true
+radius = 8.0
+neighbor_dist = 5000.0
+max_neighbors = 1200
+time_horizon = 0.1
+
+[node name="AttackTick" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="States" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="WeaponHolster" type="Node2D" parent="."]
+
+[node name="Stats" type="Node" parent="."]
+
+[node name="Health" type="Node" parent="Stats"]
+script = ExtResource( 3 )
+
+[node name="KnockBackTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="Drops" type="Node" parent="."]
+unique_name_in_owner = true
+
+[node name="Drop" type="Node" parent="Drops"]
+script = ExtResource( 5 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_NavigationAgent2D_velocity_computed"]
+[connection signal="timeout" from="KnockBackTimer" to="." method="OnKockBackTimerTimeout"]
+[connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

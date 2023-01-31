@@ -1,0 +1,2 @@
+class_name EightWayDirection
+extends SpawnDirection

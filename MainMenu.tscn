@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Themes/MainTheme.tres" type="Theme" id=1]
+[ext_resource path="res://MainMenu.gd" type="Script" id=2]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+color = Color( 0.188235, 0.176471, 0.278431, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+margin_left = 657.0
+margin_top = 80.0
+margin_right = 1266.0
+margin_bottom = 974.0
+
+[node name="StartButton" type="Control" parent="ColorRect/VBoxContainer"]
+margin_right = 609.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 350, 250 )
+
+[node name="StartButton" type="Button" parent="ColorRect/VBoxContainer/StartButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+text = "Start"
+
+[node name="Exit" type="Control" parent="ColorRect/VBoxContainer"]
+margin_top = 254.0
+margin_right = 609.0
+margin_bottom = 504.0
+rect_min_size = Vector2( 350, 250 )
+
+[node name="ExitButton" type="Button" parent="ColorRect/VBoxContainer/Exit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+text = "Exit"
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/StartButton/StartButton" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/Exit/ExitButton" to="." method="_on_ExitButton_pressed"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Nodes/Misc/RectangleCast.gd" type="Script" id=1]
+[ext_resource path="res://Nodes/Weapons/Projectiles/RectProjectile.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[node name="RectProjectile" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+rotation = 1.5708
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 3 )
+
+[node name="RectCast" type="Node2D" parent="."]
+script = ExtResource( 1 )
+CollisionMask = [ 2 ]
+MaxCollisions = 100

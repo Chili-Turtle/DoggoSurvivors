@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Nodes/Widget/NotificationIn.tres" type="Animation" id=1]
+[ext_resource path="res://Nodes/Widget/Notification.gd" type="Script" id=2]
+[ext_resource path="res://Themes/MainTheme.tres" type="Theme" id=3]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -709, 62 ) ]
+}
+
+[node name="Notification" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = -709.0
+margin_top = 62.0
+margin_right = 78.0
+margin_bottom = 169.0
+theme = ExtResource( 3 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Panel/MarginContainer"]
+margin_right = 787.0
+margin_bottom = 107.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Quest Complete : Onions Collected"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/NotificationIn = ExtResource( 1 )
+anims/RESET = SubResource( 2 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

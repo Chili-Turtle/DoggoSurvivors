@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Themes/MainTheme.tres" type="Theme" id=3]
+[ext_resource path="res://Nodes/Widget/LevelUpGUI.gd" type="Script" id=4]
+
+[node name="LevelUpGUI" type="CanvasLayer"]
+layer = 10
+script = ExtResource( 4 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 71.0
+margin_top = 75.0
+margin_right = -82.0
+margin_bottom = -61.0
+theme = ExtResource( 3 )
+
+[node name="UpgradePanel" type="Panel" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 118.0
+margin_right = -911.0
+rect_clip_content = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/UpgradePanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ItemSlotVContaoner" type="VBoxContainer" parent="Control/UpgradePanel/MarginContainer"]
+unique_name_in_owner = true
+margin_right = 738.0
+margin_bottom = 944.0
+
+[node name="WeaponPanel" type="Panel" parent="Control"]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 975.0
+margin_top = 13.0
+margin_right = -44.0
+margin_bottom = -40.0
+
+[node name="WeaponsPanel" type="MarginContainer" parent="Control/WeaponPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+
+[node name="VWeaponsContainer" type="VBoxContainer" parent="Control/WeaponPanel/WeaponsPanel"]
+unique_name_in_owner = true
+margin_right = 738.0
+margin_bottom = 881.0
+
+[node name="ConfirmButton" type="Button" parent="Control"]
+unique_name_in_owner = true
+margin_left = 241.0
+margin_top = 717.0
+margin_right = 747.0
+margin_bottom = 875.0
+theme_type_variation = "Header"
+disabled = true
+text = "Confirm"
+
+[connection signal="pressed" from="Control/ConfirmButton" to="." method="_on_ConfirmButton_pressed"]

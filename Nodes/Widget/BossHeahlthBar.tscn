@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Themes/MainTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Nodes/Widget/BossHeahlthBar.gd" type="Script" id=2]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="BossHeahlthBar" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme = ExtResource( 1 )
+
+[node name="PanelContainer" type="PanelContainer" parent="BossHeahlthBar"]
+margin_left = 461.0
+margin_top = 995.0
+margin_right = 908.0
+margin_bottom = 1042.0
+
+[node name="BossName" type="Label" parent="BossHeahlthBar/PanelContainer"]
+unique_name_in_owner = true
+margin_left = 7.0
+margin_top = 8.0
+margin_right = 440.0
+margin_bottom = 38.0
+text = "Super Long Boss Name van der hosen"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="BossHeahlthBar"]
+unique_name_in_owner = true
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -503.0
+margin_top = -46.0
+margin_right = 503.0
+theme_type_variation = "EnemieBar"
+value = 50.0

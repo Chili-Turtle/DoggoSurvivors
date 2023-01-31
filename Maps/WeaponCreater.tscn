@@ -1,0 +1,1045 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Maps/WeaponCreater.gd" type="Script" id=1]
+[ext_resource path="res://Themes/MainTheme.tres" type="Theme" id=2]
+[ext_resource path="res://Sprite/GUI/cursor_down 32x32.png" type="Texture" id=3]
+[ext_resource path="res://Sprite/GUI/cursor_right 32x32.png" type="Texture" id=4]
+
+[node name="WeaponCreater" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1115.0
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Header" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer"]
+margin_right = 805.0
+margin_bottom = 50.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Header"]
+margin_right = 400.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "Type"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Header"]
+margin_left = 404.0
+margin_right = 805.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "Value"
+align = 1
+valign = 1
+
+[node name="Option1" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer"]
+margin_top = 54.0
+margin_right = 805.0
+margin_bottom = 104.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option1"]
+margin_right = 400.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "Weapon Attack"
+align = 1
+valign = 1
+
+[node name="WeaponAttackOption" type="OptionButton" parent="CanvasLayer/Control/Panel/VBoxContainer/Option1"]
+margin_left = 404.0
+margin_right = 805.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "None"
+align = 1
+
+[node name="Option2" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer"]
+margin_top = 108.0
+margin_right = 805.0
+margin_bottom = 518.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2"]
+margin_top = 180.0
+margin_right = 400.0
+margin_bottom = 230.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "Spawn Direction"
+align = 1
+valign = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2"]
+margin_left = 404.0
+margin_right = 805.0
+margin_bottom = 410.0
+size_flags_horizontal = 3
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer"]
+margin_right = 401.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "8 Direction"
+align = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer"]
+margin_top = 54.0
+margin_right = 401.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 36, 36 )
+size_flags_vertical = 0
+icon = ExtResource( 4 )
+flat = true
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer"]
+self_modulate = Color( 0.301961, 0.65098, 1, 0.533333 )
+margin_top = 94.0
+margin_right = 401.0
+margin_bottom = 410.0
+
+[node name="InputContainer" type="VBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 394.0
+margin_bottom = 309.0
+
+[node name="Header" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer"]
+margin_right = 387.0
+margin_bottom = 30.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Header"]
+margin_right = 190.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+text = "Input Axis"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Header"]
+margin_left = 194.0
+margin_right = 387.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+text = "Spawm Direction"
+align = 1
+valign = 1
+
+[node name="Direction1" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer"]
+margin_top = 34.0
+margin_right = 387.0
+margin_bottom = 64.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Direction1"]
+margin_right = 191.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+text = "Left "
+align = 1
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Direction1"]
+margin_left = 195.0
+margin_right = 387.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="Direction2" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer"]
+margin_top = 68.0
+margin_right = 387.0
+margin_bottom = 98.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Direction2"]
+margin_right = 191.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+text = "Left&Up "
+align = 1
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Direction2"]
+margin_left = 195.0
+margin_right = 387.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="Direction3" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer"]
+margin_top = 102.0
+margin_right = 387.0
+margin_bottom = 132.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Direction3"]
+margin_right = 191.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+text = "Up"
+align = 1
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Direction3"]
+margin_left = 195.0
+margin_right = 387.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="Direction4" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer"]
+margin_top = 136.0
+margin_right = 387.0
+margin_bottom = 166.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Direction4"]
+margin_right = 191.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+text = "Right Up"
+align = 1
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Direction4"]
+margin_left = 195.0
+margin_right = 387.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="Direction5" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer"]
+margin_top = 170.0
+margin_right = 387.0
+margin_bottom = 200.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Direction5"]
+margin_right = 191.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+text = "Right"
+align = 1
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Direction5"]
+margin_left = 195.0
+margin_right = 387.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="Direction6" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer"]
+margin_top = 204.0
+margin_right = 387.0
+margin_bottom = 234.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Direction6"]
+margin_right = 191.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+text = "Right Down"
+align = 1
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Direction6"]
+margin_left = 195.0
+margin_right = 387.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="Direction7" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer"]
+margin_top = 238.0
+margin_right = 387.0
+margin_bottom = 268.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Direction7"]
+margin_right = 191.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+text = "Down"
+align = 1
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Direction7"]
+margin_left = 195.0
+margin_right = 387.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="Direction8" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer"]
+margin_top = 272.0
+margin_right = 387.0
+margin_bottom = 302.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Direction8"]
+margin_right = 191.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+text = "Left Down"
+align = 1
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/Panel/VBoxContainer/Option2/VBoxContainer/PanelContainer/InputContainer/Direction8"]
+margin_left = 195.0
+margin_right = 387.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="Option3" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer"]
+margin_top = 522.0
+margin_right = 805.0
+margin_bottom = 722.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option3"]
+margin_top = 75.0
+margin_right = 400.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "On hit Effect Wall"
+align = 1
+valign = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer/Option3"]
+margin_left = 404.0
+margin_right = 805.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 200 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer/Option3/VBoxContainer"]
+margin_right = 401.0
+margin_bottom = 32.0
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Panel/VBoxContainer/Option3/VBoxContainer/HBoxContainer"]
+margin_right = 32.0
+margin_bottom = 32.0
+icon = ExtResource( 3 )
+
+[node name="Button2" type="Button" parent="CanvasLayer/Control/Panel/VBoxContainer/Option3/VBoxContainer/HBoxContainer"]
+margin_left = 36.0
+margin_right = 68.0
+margin_bottom = 32.0
+icon = ExtResource( 4 )
+
+[node name="ItemList" type="ItemList" parent="CanvasLayer/Control/Panel/VBoxContainer/Option3/VBoxContainer"]
+margin_top = 36.0
+margin_right = 401.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Option4" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer"]
+margin_top = 726.0
+margin_right = 805.0
+margin_bottom = 776.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option4"]
+margin_right = 400.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "On hit Effect Enemies"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer/Option4"]
+margin_left = 404.0
+margin_right = 805.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer/Option4/HBoxContainer"]
+margin_right = 401.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+
+[node name="ItemList" type="ItemList" parent="CanvasLayer/Control/Panel/VBoxContainer/Option4/HBoxContainer/VBoxContainer"]
+margin_right = 401.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Control/Panel/VBoxContainer"]
+margin_top = 780.0
+margin_right = 805.0
+margin_bottom = 800.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="Option5" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer"]
+margin_top = 804.0
+margin_right = 805.0
+margin_bottom = 854.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option5"]
+margin_right = 400.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "Weapon Stats"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option5"]
+margin_left = 404.0
+margin_right = 805.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "Value"
+align = 1
+valign = 1
+
+[node name="Option6" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer"]
+margin_top = 858.0
+margin_right = 805.0
+margin_bottom = 908.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option6"]
+margin_right = 400.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "Damage"
+align = 1
+valign = 1
+
+[node name="DamageValue" type="SpinBox" parent="CanvasLayer/Control/Panel/VBoxContainer/Option6"]
+margin_left = 404.0
+margin_right = 805.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="Option7" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer"]
+margin_top = 912.0
+margin_right = 805.0
+margin_bottom = 962.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option7"]
+margin_right = 400.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "Projectile Amount"
+align = 1
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="CanvasLayer/Control/Panel/VBoxContainer/Option7"]
+margin_left = 404.0
+margin_right = 805.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="Option8" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer"]
+margin_top = 966.0
+margin_right = 805.0
+margin_bottom = 1016.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option8"]
+margin_right = 400.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "Projectile Speed"
+align = 1
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="CanvasLayer/Control/Panel/VBoxContainer/Option8"]
+margin_left = 404.0
+margin_right = 805.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="Option9" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer"]
+margin_top = 1020.0
+margin_right = 805.0
+margin_bottom = 1070.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option9"]
+margin_right = 400.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "Area/Hitbox"
+align = 1
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="CanvasLayer/Control/Panel/VBoxContainer/Option9"]
+margin_left = 404.0
+margin_right = 805.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="Option10" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer"]
+margin_top = 1074.0
+margin_right = 805.0
+margin_bottom = 1124.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option10"]
+margin_right = 400.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "Spawn Radius/Offset"
+align = 1
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="CanvasLayer/Control/Panel/VBoxContainer/Option10"]
+margin_left = 404.0
+margin_right = 805.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="Option11" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer"]
+margin_top = 1128.0
+margin_right = 805.0
+margin_bottom = 1178.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option11"]
+margin_right = 400.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "CoolDown "
+align = 1
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="CanvasLayer/Control/Panel/VBoxContainer/Option11"]
+margin_left = 404.0
+margin_right = 805.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="Option12" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer"]
+margin_top = 1182.0
+margin_right = 805.0
+margin_bottom = 1232.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option12"]
+margin_right = 400.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "ProjectileInterval "
+align = 1
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="CanvasLayer/Control/Panel/VBoxContainer/Option12"]
+margin_left = 404.0
+margin_right = 805.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="Option13" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer"]
+margin_top = 1236.0
+margin_right = 805.0
+margin_bottom = 1286.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option13"]
+margin_right = 400.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "Kockback Amount"
+align = 1
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="CanvasLayer/Control/Panel/VBoxContainer/Option13"]
+margin_left = 404.0
+margin_right = 805.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="Option14" type="HBoxContainer" parent="CanvasLayer/Control/Panel/VBoxContainer"]
+margin_top = 1290.0
+margin_right = 805.0
+margin_bottom = 1340.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer/Option14"]
+margin_right = 400.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "if Max Range"
+align = 1
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="CanvasLayer/Control/Panel/VBoxContainer/Option14"]
+margin_left = 404.0
+margin_right = 805.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+align = 1
+
+[node name="NicePanel" type="Panel" parent="CanvasLayer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 891.0
+margin_right = 891.0
+
+[node name="NiceRowWithSeperator" type="HBoxContainer" parent="CanvasLayer/Control/NicePanel"]
+margin_left = 12.0
+margin_right = 788.0
+margin_bottom = 482.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator"]
+margin_right = 300.0
+margin_bottom = 482.0
+rect_min_size = Vector2( 300, 0 )
+
+[node name="Label3" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+text = "Type"
+valign = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer"]
+margin_top = 54.0
+margin_right = 300.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 0, 50 )
+text = "Weapon Attack Type"
+valign = 1
+
+[node name="Label4" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer"]
+margin_top = 108.0
+margin_right = 300.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 0, 50 )
+text = "Spawn Position"
+valign = 1
+
+[node name="Label5" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer"]
+margin_top = 162.0
+margin_right = 300.0
+margin_bottom = 212.0
+rect_min_size = Vector2( 0, 50 )
+text = "On hit Effect Wall"
+valign = 1
+
+[node name="Label6" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer"]
+margin_top = 216.0
+margin_right = 300.0
+margin_bottom = 266.0
+rect_min_size = Vector2( 0, 50 )
+text = "On hit Effect Enemies"
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer"]
+margin_top = 270.0
+margin_right = 300.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 0, 50 )
+text = "Weapon Stats:"
+valign = 1
+
+[node name="Label7" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer"]
+margin_top = 324.0
+margin_right = 300.0
+margin_bottom = 374.0
+rect_min_size = Vector2( 0, 50 )
+text = "ProjectileSpeed:"
+valign = 1
+
+[node name="Label8" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer"]
+margin_top = 378.0
+margin_right = 300.0
+margin_bottom = 428.0
+rect_min_size = Vector2( 0, 50 )
+text = "Damage:"
+valign = 1
+
+[node name="Label9" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer"]
+margin_top = 432.0
+margin_right = 300.0
+margin_bottom = 482.0
+rect_min_size = Vector2( 0, 50 )
+text = "Area:"
+valign = 1
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator"]
+margin_left = 304.0
+margin_right = 334.0
+margin_bottom = 482.0
+rect_min_size = Vector2( 30, 100 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator"]
+margin_left = 338.0
+margin_right = 538.0
+margin_bottom = 482.0
+rect_min_size = Vector2( 200, 0 )
+
+[node name="Label4" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2"]
+margin_right = 200.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+text = "Value"
+valign = 1
+
+[node name="AttackTypeOption" type="OptionButton" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2"]
+unique_name_in_owner = true
+margin_top = 54.0
+margin_right = 200.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 0, 50 )
+text = "Hit Scan"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2"]
+margin_top = 108.0
+margin_right = 200.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 200, 0 )
+
+[node name="SpawnPositionOption" type="OptionButton" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
+margin_right = 200.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+text = "8 Directions"
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer"]
+visible = false
+margin_top = 54.0
+margin_right = 36.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 36, 36 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "V"
+icon_align = 1
+
+[node name="InputContainer" type="VBoxContainer" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer"]
+visible = false
+margin_top = 94.0
+margin_right = 314.0
+margin_bottom = 444.0
+
+[node name="Header" type="HBoxContainer" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer"]
+margin_right = 314.0
+margin_bottom = 30.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Header"]
+margin_right = 117.0
+margin_bottom = 30.0
+text = "Input Axis"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Header"]
+margin_left = 121.0
+margin_right = 314.0
+margin_bottom = 30.0
+text = "Spawm Direction"
+
+[node name="Direction1" type="HBoxContainer" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer"]
+margin_top = 34.0
+margin_right = 314.0
+margin_bottom = 70.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Direction1"]
+margin_top = 3.0
+margin_right = 56.0
+margin_bottom = 33.0
+text = "Left "
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Direction1"]
+margin_left = 60.0
+margin_right = 195.0
+margin_bottom = 36.0
+text = "Direction"
+
+[node name="Direction2" type="HBoxContainer" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer"]
+margin_top = 74.0
+margin_right = 314.0
+margin_bottom = 110.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Direction2"]
+margin_top = 3.0
+margin_right = 105.0
+margin_bottom = 33.0
+text = "Left&Up "
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Direction2"]
+margin_left = 109.0
+margin_right = 244.0
+margin_bottom = 36.0
+text = "Direction"
+
+[node name="Direction3" type="HBoxContainer" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer"]
+margin_top = 114.0
+margin_right = 314.0
+margin_bottom = 150.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Direction3"]
+margin_top = 3.0
+margin_right = 31.0
+margin_bottom = 33.0
+text = "Up"
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Direction3"]
+margin_left = 35.0
+margin_right = 170.0
+margin_bottom = 36.0
+text = "Direction"
+
+[node name="Direction4" type="HBoxContainer" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer"]
+margin_top = 154.0
+margin_right = 314.0
+margin_bottom = 190.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Direction4"]
+margin_top = 3.0
+margin_right = 98.0
+margin_bottom = 33.0
+text = "Right Up"
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Direction4"]
+margin_left = 102.0
+margin_right = 237.0
+margin_bottom = 36.0
+text = "Direction"
+
+[node name="Direction5" type="HBoxContainer" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer"]
+margin_top = 194.0
+margin_right = 314.0
+margin_bottom = 230.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Direction5"]
+margin_top = 3.0
+margin_right = 61.0
+margin_bottom = 33.0
+text = "Right"
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Direction5"]
+margin_left = 65.0
+margin_right = 200.0
+margin_bottom = 36.0
+text = "Direction"
+
+[node name="Direction6" type="HBoxContainer" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer"]
+margin_top = 234.0
+margin_right = 314.0
+margin_bottom = 270.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Direction6"]
+margin_top = 3.0
+margin_right = 132.0
+margin_bottom = 33.0
+text = "Right Down"
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Direction6"]
+margin_left = 136.0
+margin_right = 271.0
+margin_bottom = 36.0
+text = "Direction"
+
+[node name="Direction7" type="HBoxContainer" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer"]
+margin_top = 274.0
+margin_right = 314.0
+margin_bottom = 310.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Direction7"]
+margin_top = 3.0
+margin_right = 65.0
+margin_bottom = 33.0
+text = "Down"
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Direction7"]
+margin_left = 69.0
+margin_right = 204.0
+margin_bottom = 36.0
+text = "Direction"
+
+[node name="Direction8" type="HBoxContainer" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer"]
+margin_top = 314.0
+margin_right = 314.0
+margin_bottom = 350.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Direction8"]
+margin_top = 3.0
+margin_right = 121.0
+margin_bottom = 33.0
+text = "Left Down"
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2/VBoxContainer/InputContainer/Direction8"]
+margin_left = 125.0
+margin_right = 260.0
+margin_bottom = 36.0
+text = "Direction"
+
+[node name="OnHitWallOption" type="OptionButton" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2"]
+unique_name_in_owner = true
+margin_top = 162.0
+margin_right = 200.0
+margin_bottom = 212.0
+rect_min_size = Vector2( 0, 50 )
+text = "Bounce"
+
+[node name="OnHitEnemies" type="OptionButton" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2"]
+unique_name_in_owner = true
+margin_top = 216.0
+margin_right = 200.0
+margin_bottom = 266.0
+rect_min_size = Vector2( 0, 50 )
+text = "None"
+
+[node name="Label3" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2"]
+margin_top = 270.0
+margin_right = 200.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "3"
+valign = 1
+
+[node name="Label5" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2"]
+margin_top = 324.0
+margin_right = 200.0
+margin_bottom = 374.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "3"
+valign = 1
+
+[node name="Label6" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2"]
+margin_top = 378.0
+margin_right = 200.0
+margin_bottom = 428.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "3"
+valign = 1
+
+[node name="Label7" type="Label" parent="CanvasLayer/Control/NicePanel/NiceRowWithSeperator/VBoxContainer2"]
+margin_top = 432.0
+margin_right = 200.0
+margin_bottom = 482.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "3"
+valign = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/NicePanel"]
+margin_left = 17.0
+margin_top = 535.0
+margin_right = 793.0
+margin_bottom = 894.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/NicePanel/HBoxContainer2"]
+margin_right = 300.0
+margin_bottom = 359.0
+rect_min_size = Vector2( 300, 0 )
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/NicePanel/HBoxContainer2/VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+text = "Weapon Stats:"
+valign = 1
+
+[node name="Label7" type="Label" parent="CanvasLayer/Control/NicePanel/HBoxContainer2/VBoxContainer"]
+margin_top = 54.0
+margin_right = 300.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 0, 50 )
+text = "ProjectileSpeed:"
+valign = 1
+
+[node name="Label8" type="Label" parent="CanvasLayer/Control/NicePanel/HBoxContainer2/VBoxContainer"]
+margin_top = 108.0
+margin_right = 300.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 0, 50 )
+text = "Damage:"
+valign = 1
+
+[node name="Label9" type="Label" parent="CanvasLayer/Control/NicePanel/HBoxContainer2/VBoxContainer"]
+margin_top = 162.0
+margin_right = 300.0
+margin_bottom = 212.0
+rect_min_size = Vector2( 0, 50 )
+text = "Area:"
+valign = 1
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/Control/NicePanel/HBoxContainer2"]
+margin_left = 304.0
+margin_right = 334.0
+margin_bottom = 359.0
+rect_min_size = Vector2( 30, 100 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control/NicePanel/HBoxContainer2"]
+margin_left = 338.0
+margin_right = 538.0
+margin_bottom = 359.0
+rect_min_size = Vector2( 200, 0 )
+
+[node name="Label4" type="Label" parent="CanvasLayer/Control/NicePanel/HBoxContainer2/VBoxContainer2"]
+margin_right = 200.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+text = "Value"
+valign = 1
+
+[node name="Label3" type="Label" parent="CanvasLayer/Control/NicePanel/HBoxContainer2/VBoxContainer2"]
+margin_top = 54.0
+margin_right = 200.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "3"
+valign = 1
+
+[node name="Label5" type="Label" parent="CanvasLayer/Control/NicePanel/HBoxContainer2/VBoxContainer2"]
+margin_top = 108.0
+margin_right = 200.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "3"
+valign = 1
+
+[node name="Label6" type="Label" parent="CanvasLayer/Control/NicePanel/HBoxContainer2/VBoxContainer2"]
+margin_top = 162.0
+margin_right = 200.0
+margin_bottom = 212.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "3"
+valign = 1
+
+[node name="Label7" type="Label" parent="CanvasLayer/Control/NicePanel/HBoxContainer2/VBoxContainer2"]
+margin_top = 216.0
+margin_right = 200.0
+margin_bottom = 266.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "3"
+valign = 1

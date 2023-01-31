@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprite/crystals/hexagonal_crystals trans.png" type="Texture" id=1]
+[ext_resource path="res://Nodes/Gems/Gem.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[node name="PickUp" type="Area2D"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource( 2 )
+ItemName = "Yellow Gem"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.333333, 0.333333 )
+texture = ExtResource( 1 )
+hframes = 12
+frame = 9

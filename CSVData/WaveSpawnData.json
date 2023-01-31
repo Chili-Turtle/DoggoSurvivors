@@ -1,0 +1,82 @@
+[
+  {
+    "id": "Wave0",
+    "NextWaveTimer": 8,
+    "WaveSpawnEnemies": "8 Bat, 1 Skelleton, 1 Goblin",
+    "SpawnTick": 2.5,
+    "TickSpawnEnemies": "Bat, Skelleton",
+    "Icon": "res://Sprite/GUI Icons/Fighting Icon.png"
+  },
+  {
+    "id": "Wave1",
+    "NextWaveTimer": 60,
+    "WaveSpawnEnemies": "8 Bat, 5 Skelleton, 1 Goblin",
+    "SpawnTick": 2.5,
+    "TickSpawnEnemies": "Bat, Skelleton",
+    "Icon": "res://Sprite/GUI Icons/Fighting Icon.png"
+  },
+  {
+    "id": "Wave2",
+    "NextWaveTimer": 135,
+    "WaveSpawnEnemies": "15 Bat, 8 Skelleton, 2 Goblin",
+    "SpawnTick": 2.5,
+    "TickSpawnEnemies": "Bat, Skelleton",
+    "Icon": "res://Sprite/GUI Icons/Fighting Icon.png"
+  },
+  {
+    "id": "Wave3",
+    "NextWaveTimer": 200,
+    "WaveSpawnEnemies": "",
+    "SpawnTick": "",
+    "TickSpawnEnemies": "",
+    "Icon": "res://Sprite/GUI Icons/restIcon small.png"
+  },
+  {
+    "id": "Wave4",
+    "NextWaveTimer": 240,
+    "WaveSpawnEnemies": "30 Bat2, 15 Skelleton2, 3  Goblin",
+    "SpawnTick": 1.5,
+    "TickSpawnEnemies": "Bat, Skelleton, Goblin",
+    "Icon": "res://Sprite/GUI Icons/Fighting Icon.png"
+  },
+  {
+    "id": "Wave5",
+    "NextWaveTimer": 350,
+    "WaveSpawnEnemies": "30 Bat3,20 Skelleton3, 2 SkelletonBoss, 4  Goblin2",
+    "SpawnTick": 1,
+    "TickSpawnEnemies": "Bat, Skelleton, Goblin",
+    "Icon": "res://Sprite/GUI Icons/Fighting Icon.png"
+  },
+  {
+    "id": "Wave5",
+    "NextWaveTimer": 400,
+    "WaveSpawnEnemies": "45 Bat3,35 Skelleton3, 2 SkelletonBoss, 6  Goblin2",
+    "SpawnTick": 1,
+    "TickSpawnEnemies": "Bat, Skelleton, Goblin",
+    "Icon": "res://Sprite/GUI Icons/Fighting Icon.png"
+  },
+  {
+    "id": "Wave6",
+    "NextWaveTimer": 425,
+    "WaveSpawnEnemies": "",
+    "SpawnTick": "",
+    "TickSpawnEnemies": "",
+    "Icon": "res://Sprite/GUI Icons/restIcon small.png"
+  },
+  {
+    "id": "Wave7",
+    "NextWaveTimer": 500,
+    "WaveSpawnEnemies": "50 Bat4, 45 Skelleton4, 4 SkelletonBoss, 9  Goblin3",
+    "SpawnTick": 0.5,
+    "TickSpawnEnemies": "Bat, Skelleton, SkelletonBoss,  Goblin",
+    "Icon": "res://Sprite/GUI Icons/Fighting Icon.png"
+  },
+  {
+    "id": "Wave8",
+    "NextWaveTimer": 999,
+    "WaveSpawnEnemies": "20 Bat5, 5 Skelleton5, 2 SkelletonBoss, 10  Goblin4",
+    "SpawnTick": 999,
+    "TickSpawnEnemies": "Bat, Skelleton, SkelletonBoss,  Goblin",
+    "Icon": "res://Sprite/GUI Icons/Fighting Icon.png"
+  }
+]

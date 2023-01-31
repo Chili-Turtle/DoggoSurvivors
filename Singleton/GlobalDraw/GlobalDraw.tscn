@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Singleton/GlobalDraw/GlobalDraw.gd" type="Script" id=1]
+[ext_resource path="res://Singleton/GlobalDraw/GlobalDrawingCanvas.gd" type="Script" id=2]
+
+[node name="GlobalDrawingCanvas" type="CanvasLayer"]
+layer = 128
+follow_viewport_enable = true
+script = ExtResource( 2 )
+
+[node name="DrawNode" type="Node2D" parent="."]
+script = ExtResource( 1 )

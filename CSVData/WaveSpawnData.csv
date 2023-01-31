@@ -1,0 +1,11 @@
+id,NextWaveTimer,WaveSpawnEnemies,SpawnTick,TickSpawnEnemies,Icon
+Wave0,8,"8 Bat, 1 Skelleton, 1 Goblin",2.5,"Bat, Skelleton",res://Sprite/GUI Icons/Fighting Icon.png
+Wave1,60,"8 Bat, 5 Skelleton, 1 Goblin",2.5,"Bat, Skelleton",res://Sprite/GUI Icons/Fighting Icon.png
+Wave2,135,"15 Bat, 8 Skelleton, 2 Goblin",2.5,"Bat, Skelleton",res://Sprite/GUI Icons/Fighting Icon.png
+Wave3,200,,,,res://Sprite/GUI Icons/restIcon small.png
+Wave4,240,"30 Bat2, 15 Skelleton2, 3  Goblin",1.5,"Bat, Skelleton, Goblin",res://Sprite/GUI Icons/Fighting Icon.png
+Wave5,350,"30 Bat3,20 Skelleton3, 2 SkelletonBoss, 4  Goblin2",1,"Bat, Skelleton, Goblin",res://Sprite/GUI Icons/Fighting Icon.png
+Wave5,400,"45 Bat3,35 Skelleton3, 2 SkelletonBoss, 6  Goblin2",1,"Bat, Skelleton, Goblin",res://Sprite/GUI Icons/Fighting Icon.png
+Wave6,425,,,,res://Sprite/GUI Icons/restIcon small.png
+Wave7,500,"50 Bat4, 45 Skelleton4, 4 SkelletonBoss, 9  Goblin3",0.5,"Bat, Skelleton, SkelletonBoss,  Goblin",res://Sprite/GUI Icons/Fighting Icon.png
+Wave8,999,"20 Bat5, 5 Skelleton5, 2 SkelletonBoss, 10  Goblin4",999,"Bat, Skelleton, SkelletonBoss,  Goblin",res://Sprite/GUI Icons/Fighting Icon.png

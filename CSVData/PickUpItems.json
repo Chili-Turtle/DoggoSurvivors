@@ -1,0 +1,80 @@
+[
+  {
+    "id": "Blue Gem",
+    "PickUpName": "Blue Gem",
+    "Value": 2,
+    "Weight": 50,
+    "TexturePath": "res://Sprite/crystals/hexagonal_crystals trans.png",
+    "hframes": 12,
+    "vframes": 1,
+    "Curframe": 7,
+    "AnimationPath": "",
+    "SoundFile": "res://Sounds/sfx/Coins/pick up Coin 3.wav",
+    "Script": ""
+  },
+  {
+    "id": "Violette Gem",
+    "PickUpName": "Violette Gem",
+    "Value": 9,
+    "Weight": 40,
+    "TexturePath": "res://Sprite/crystals/hexagonal_crystals trans.png",
+    "hframes": 12,
+    "vframes": 1,
+    "Curframe": 10,
+    "AnimationPath": "",
+    "SoundFile": "",
+    "Script": ""
+  },
+  {
+    "id": "Yellow Gem",
+    "PickUpName": "Yellow Gem",
+    "Value": 20,
+    "Weight": 10,
+    "TexturePath": "res://Sprite/crystals/hexagonal_crystals trans.png",
+    "hframes": 12,
+    "vframes": 1,
+    "Curframe": 2,
+    "AnimationPath": "",
+    "SoundFile": "",
+    "Script": ""
+  },
+  {
+    "id": "Chicken",
+    "PickUpName": "Chicken",
+    "Value": 30,
+    "Weight": 0,
+    "TexturePath": "",
+    "hframes": "",
+    "vframes": "",
+    "Curframe": "",
+    "AnimationPath": "",
+    "SoundFile": "",
+    "Script": ""
+  },
+  {
+    "id": "Heart",
+    "PickUpName": "Heart",
+    "Value": 10,
+    "Weight": 0,
+    "TexturePath": "",
+    "hframes": "",
+    "vframes": "",
+    "Curframe": "",
+    "AnimationPath": "",
+    "SoundFile": "",
+    "Script": ""
+  },
+  {
+    "id": "Chest",
+    "PickUpName": "Chest",
+    "Value": 0,
+    "Weight": 50,
+    "TexturePath": "res://Sprite/Chest/Chests.png",
+    "hframes": 5,
+    "vframes": 8,
+    "Curframe": 0,
+    "AnimationPath": "res://Sprite/Chest/ChestOpen1.anim",
+    "SoundFile": "",
+    "Script": ""
+  }
+]

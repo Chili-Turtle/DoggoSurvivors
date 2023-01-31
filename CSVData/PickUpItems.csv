@@ -1,0 +1,7 @@
+id,PickUpName,Value,Weight,TexturePath,hframes,vframes,Curframe,AnimationPath,SoundFile,Script
+Blue Gem,Blue Gem,2,50,res://Sprite/crystals/hexagonal_crystals trans.png,12,1,7,,res://Sounds/sfx/Coins/pick up Coin 3.wav,
+Violette Gem,Violette Gem,9,40,res://Sprite/crystals/hexagonal_crystals trans.png,12,1,10,,,
+Yellow Gem,Yellow Gem,20,10,res://Sprite/crystals/hexagonal_crystals trans.png,12,1,2,,,
+Chicken,Chicken,30,0,,,,,,,
+Heart,Heart,10,0,,,,,,,
+Chest,Chest,0,50,res://Sprite/Chest/Chests.png,5,8,0,res://Sprite/Chest/ChestOpen1.anim,,

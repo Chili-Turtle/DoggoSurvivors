@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Nodes/Weapons/GeneratedWeapons/Resources/SpawnDirection/Scripts/180CircleSpawn.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+PlayerInputLeft = 0
+PlayerInputRight = 1
+PlayerInputUp = 2
+PlayerInputDown = 3
+PlayerInputDiagonalUp_Left = 4
+PlayerInputDiagonalUp_Right = 5
+PlayerInputDiagonalDown_Left = 6
+PlayerInputDiagonalDiagonalDown_Right = 7
+RotationDirection = 1
+CirclePointsAmount = 3

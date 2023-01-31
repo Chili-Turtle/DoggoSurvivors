@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="State" type="Node2D"]
+
+[node name="StateTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="StateIntervalTimer" type="Timer" parent="."]
+unique_name_in_owner = true
